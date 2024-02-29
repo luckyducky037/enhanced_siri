@@ -81,7 +81,7 @@ def receive_audio(filename):
       wf.writeframes(b''.join(frames))
 
 import openai
-openai.api_key = "sk-gWe7WmVvGvYhOIlIq5P34hkCNJdoG6dzT6K94CPGsxuAxulp"
+openai.api_key = "sk-gWe7WmVvGvYhOIlIq5P34hkCNJdoG6dzT6K94CPGsxuAxulp"    # Yes, you can use this if you want.
 openai.api_base = "https://api.goose.ai/v1"
 
 def chat_with_gpt(prompt):
@@ -98,7 +98,7 @@ def chat_with_gpt(prompt):
   response = ""
 
   for c in completion:
-    # print (c.choices[0].text, end = '')
+    # print (c.choices[0].text, end = '')    # if you want a token by token response
     response = response+c.choices[0].text
   
   print("")
@@ -109,25 +109,6 @@ def chat_with_mistral(prompt, model="TheBloke/Mistral-7B-Instruct-v0.2-GGUF"):
     generator = pipeline("text-generation", model=model)
     response = generator(prompt, max_length=150, num_return_sequences=1)
     return response[0]['generated_text'].strip()
-
-"""
-def update_memory(user_input, response):
-  memory[user_input] = response
-
-receive_audio("input.mp3")
-user_input = speech_to_text("input.mp3")[0]
-print("User: ", response)
-
-response = chat_with_mistral(" ".join(sum(memory.values(), [])) + user_input)
-print("Assistant: ", response)
-
-def text_to_speech(text, filename):
-  tts = gTTS(text=text, lang='en')
-  tts.save(filename)
-  os.system(filename)
-
-text_to_speech(response, "response.mp3")
-"""
 
 def update_memory(user_input, response):
   memory[user_input] = response
