@@ -27,7 +27,7 @@ def play_sound(file_path):
 
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="insert here")
 
 m=[
 	 {"role": "system", "content": "You are a helpful assistant that takes in audio and returns speech, like Siri."},
