@@ -1,0 +1,1 @@
+This is far superior to v1, using OpenAI's gpt-3.5-turbo model. Still lacking Siri's phone functionalities though.
