@@ -1,0 +1,27 @@
+Recording...
+Finished recording
+User:  Can you search for me who was murdered in his bathtub?
+Assistant:  <<<GOOG: who was murdered in his bathtub>>>
+sh: response1.mp3: command not found
+Opening in existing browser session.
+Recording...
+Finished recording
+User:  Text 778-682-4893. The message is, Hello, this is George.
+Assistant:  <<<TEXT: 778-682-4893, message="Hello, this is George">>>
+sh: response2.mp3: command not found
+Recording...
+Finished recording
+User:  Call 778-682-4893
+Assistant:  <<<CALL: 778-682-4893>>>
+sh: response3.mp3: command not found
+Recording...
+Finished recording
+User:  What's the time right now?
+Assistant:  <<<TIME>>>
+sh: response4.mp3: command not found
+Recording...
+Finished recording
+User:  Tell me a joke.
+Assistant:  Sure, here is a joke for you: Why couldn't the bicycle find its way home? Because it lost its bearings!
+sh: response5.mp3: command not found
+Available...
