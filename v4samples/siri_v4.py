@@ -32,7 +32,7 @@ def play_sound(file_path):
 
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="nuh uh")
 
 with open("prompt.txt", 'r') as file:
     initial_prompt = file.read()
@@ -250,23 +250,23 @@ def blink(num):
 	return ", ".join(obj)
 
 def wait(keyword):
-		recognizer = sr.Recognizer()
-		recognizer.pause_threshold = 2
-		with sr.Microphone() as source:
-			recognizer.adjust_for_ambient_noise(source)
-			try:
-				audio = recognizer.listen(source, timeout=None, phrase_time_limit=1)
-				command = recognizer.recognize_google(audio)
-				if keyword.lower() in command.lower():
-					return True
-				else:
-					return False
-			except sr.WaitTimeoutError:
+	recognizer = sr.Recognizer()
+	recognizer.pause_threshold = 2
+	with sr.Microphone() as source:
+		recognizer.adjust_for_ambient_noise(source)
+		try:
+			audio = recognizer.listen(source, timeout=None, phrase_time_limit=1)
+			command = recognizer.recognize_google(audio)
+			if keyword.lower() in command.lower():
+				return True
+			else:
 				return False
-			except sr.UnknownValueError:
-				return False
-			except sr.RequestError:
-				return False
+		except sr.WaitTimeoutError:
+			return False
+		except sr.UnknownValueError:
+			return False
+		except sr.RequestError:
+			return False
 
 while True:
 	print("Ready.")
